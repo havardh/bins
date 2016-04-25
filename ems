@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ $(pgrep emacs) ]]; then
+   emacsclient -c -e '(progn (magit-status ".") (delete-other-windows))' &
+else
+   emacs -eval '(progn (magit-status ".") (delete-other-windows))' &
+fi

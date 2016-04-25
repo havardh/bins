@@ -1,0 +1,11 @@
+#!/bin/bash
+
+pid=$(pgrep emacs)
+
+
+if [[ $(pgrep emacs) ]]; then
+   emacsclient -c $1 &
+else
+   emacs $1 &
+fi
+#emacsclient "$@"
