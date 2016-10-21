@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+CLASS=`echo $1 | awk -F "." '{print $1}'`
+
+IMPORTS=`grep '^import .*;$' $1 | awk -F "." '{print $NF}' | sed 's/;$//'`
+
+CLASS_LINE_NO=`grep -n 'class $CLASS' $1 | awk -F ":" '{print $1}'`
+
+
+#BODY=`tail -n +${CLASS_LINE_NO}`
+
+#echo $CLASS
+#echo $IMPORTS
+echo `grep -n 'class $CLASS' $1 | awk -F ":" '{print $1}'`

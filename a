@@ -1,0 +1,6 @@
+#!/bin/bash
+
+i3-msg "split vertical; layout stacking"
+atom -f -n $1
+i3-msg "layout default"
+

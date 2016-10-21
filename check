@@ -1,0 +1,5 @@
+#!/bin/bash
+
+HB_ROOT=~/itera/hb-advisory/cap
+
+java -jar ~/lib/checkstyle-6.19-all.jar -c $HB_ROOT/config/sun_checks.xml -p $HB_ROOT/checkstyle.properties `git diff --name-only master HEAD`

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+DD=`shuf -i 1-26 -n 1 | awk '{printf "%02d", $0;}'`
+MM=`shuf -i 1-12 -n 1 | awk '{printf "%02d", $0;}'`
+YY=`shuf -i 1-98 -n 1 | awk '{printf "%02d", $0;}'`
+
+
+DATE="$DD$MM$YY"
+echo $DATE
+
+SSN=$(curl -silent 'http://naboens.net/ssn/generator/index.php?ddmmyy=010188&kjonn=mann' | sed 's/<br\/>/\n/g' | grep -P '[0-9]{11}' |  shuf -n 1)
+
+echo $SSN
+echo $SSN | xclip -sel clip

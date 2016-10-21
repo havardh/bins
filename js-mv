@@ -1,0 +1,9 @@
+#!/bin/bash
+
+FROM=$1
+TO=$2
+
+echo `git grep -l ${FROM}`
+
+#git grep -l '$FROM' | xargs sed -i 's/$FROM/$TO/g'
+#mv $FROM $TO
