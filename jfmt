@@ -1,0 +1,3 @@
+#!/bin/bash
+
+google-java-format -i $(find . -type f -name "*.java")
