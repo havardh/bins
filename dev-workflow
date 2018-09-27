@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ~/dev/workflow
+yarn start -- workflow

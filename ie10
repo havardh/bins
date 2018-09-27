@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ~/boxes/ie10-win7
+vagrant up

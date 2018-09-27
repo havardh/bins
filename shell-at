@@ -1,0 +1,10 @@
+#!/bin/bash
+
+CMD=xterm
+CWD=$1
+
+if [ -n "$CWD" ]; then
+  cd $CWD && xterm -T "xterm | test $CWD"
+else
+  $CMD
+fi

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd /home/havard/dev/workflow
+
+#~/.virtualenvs/workflow/bin/python -m workflow /home/havard/dev/workflow/examples/component.yaml $1
+yarn start -- editable

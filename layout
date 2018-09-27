@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+workspace=0
+while read line; do
+  if [ "$line" = true ]; then
+    break # break if we found the active workspace 
+  else
+    workspace="$line" # evaluate the next workspace
+  fi
+done < <(i3-msg -t get_workspaces | jshon -a -e name -u -p -e focused -u)
+echo "$workspace"
+
+function move_workspace_to {
+  i3-msg workspace $1
+  i3-msg move workspace to output $2
+}
+
+move_workspace_to 2 DP1-1
+move_workspace_to 3 DP1-2
+move_workspace_to 4 DP1-1
+move_workspace_to 5 DP1-1
+
+i3-msg workspace $workspace

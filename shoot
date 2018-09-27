@@ -1,0 +1,4 @@
+#!/bin/bash
+
+scrot -s /tmp/screenshot.png
+convert /tmp/screenshot.png -shave 1x1 ~/screenshot.png

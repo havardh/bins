@@ -1,0 +1,5 @@
+#!/bin/bash
+
+scrot -s ~/screenshot-clip.png
+xclip ~/screenshot-clip.png
+rm ~/screenshot-clip.png

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+CMD=xterm
+CWD=$1
+TEST=$2
+
+if [ -n "$CWD" ]; then
+  cd $CWD && xterm -T "xterm | nw $CWD $TEST" -e "npm run watch:test:base -- $TEST"
+else
+  $CMD
+fi
